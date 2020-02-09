@@ -28,9 +28,12 @@
 // final array of the products of all the integers before each index
 //[1, 3, 3, 6, 30, 180]
 
-//Notice that we're always adding one new integer to our multiplication for each index!
+//Notice that we're always adding one new integer to our multiplication for 
+//each index!
 
-//So to get the products of all the integers before each index, we could greedily store each product so far and multiply that by the next integer. Then we can store that new product so far and keep going.
+//So to get the products of all the integers before each index, we could greedily 
+//store each product so far and multiply that by the next integer. 
+//Then we can store that new product so far and keep going.
 
 //So how can we apply this to our input array?
 
