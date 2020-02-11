@@ -75,6 +75,33 @@ console.log(isBalanced([1, 2, 3, 4]))
 
 // complexity: O(n) time and O(n) space
 
+//Sometimes it's good to start by rephrasing or "simplifying" the problem.
+
+//The requirement of "the difference between the depths of any two leaf nodes 
+//is no greater than 1" implies that we'll have to compare the depths of all 
+//possible pairs of leaves. That'd be expensive—if there are nn leaves, 
+//there are O(n^2)O(n^2)) possible pairs of leaves.
+
+//But we can simplify this requirement to require less work. 
+//For example, we could equivalently say:
+
+//"The difference between the min leaf depth and the max leaf depth is 1 or less"
+//"There are at most two distinct leaf depths, and they are at most 1 apart"
+//If you're having trouble with a recursive approach, try using an iterative one.
+
+//To get to our leaves and measure their depths, we'll have to traverse 
+//the tree somehow. What methods do we know for traversing a tree?
+
+//We do a depth-first walk ↴ through our tree, keeping track of the depth as 
+//we go. When we find a leaf, we add its depth to an array of depths if we 
+//haven't seen that depth already.
+
+//Each time we hit a leaf with a new depth, there are two ways that our tree 
+//might now be unbalanced:
+
+//There are more than 2 different leaf depths
+//There are exactly 2 leaf depths and they are more than 1 apart.
+
 //What We Learned
 //This is an intro to some tree basics. If this is new to you, don't worry—it 
 //can take a few questions for this stuff to come together. We have a few more 
