@@ -79,8 +79,8 @@ console.log(isBalanced([1, 2, 3, 4]))
 
 //The requirement of "the difference between the depths of any two leaf nodes 
 //is no greater than 1" implies that we'll have to compare the depths of all 
-//possible pairs of leaves. That'd be expensive—if there are nn leaves, 
-//there are O(n^2)O(n^2)) possible pairs of leaves.
+//possible pairs of leaves. That'd be expensive—if there are n leaves, 
+//there are O(n^2)) possible pairs of leaves.
 
 //But we can simplify this requirement to require less work. 
 //For example, we could equivalently say:
