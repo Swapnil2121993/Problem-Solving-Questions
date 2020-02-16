@@ -9,7 +9,7 @@
 // an array of coin denominations
 // computes the number of ways to make the amount of money with coins of the available denominations.
 
-// Example: for amount=44 (44¢) and denominations=[1,2,3][1,2,3] (11¢, 22¢ and 33¢), your program would output 44—the number of ways to make 44¢ with those denominations:
+// Example: for amount=4 (4¢) and denominations=[1,2,3] (1¢, 2¢ and 3¢), your program would output 4—the number of ways to make 4¢ with those denominations:
 
 // 1¢, 1¢, 1¢, 1¢
 // 1¢, 1¢, 2¢
@@ -59,15 +59,15 @@ class Change {
 
 		// Check our memo and short-circuit if we've already solved this one
 		const memoKey = [amountLeft, currentIndex].join(', ');
-		if (this.memo.hasOwnProperty(n)) {
+		if (this.memo.hasOwnProperty(memoKey)) {
 			return this.memo[memoKey]
 		}
 
-		if (amountLeft === 0) return 0;
+		if (amountLeft === 0) return 1;
 
 		if (amountLeft < 0) return 0;
 
-		if (currentIndex === denominations.length) return 0;
+		if (currentIndex === denominations.length) return 1;
 
 		let numPossibilities = 0;
 		while (amountLeft > 0) {

@@ -55,7 +55,7 @@ function findRectangularOverlap(rect1, rect2) {
         leftX: xOverlap.startPoint,
         bottomY: yOverlap.startPoint,
         width: xOverlap.overlapLength,
-        height: yOverlap.width
+        height: yOverlap.overlapLength
     };
 }
 
