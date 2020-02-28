@@ -25,7 +25,7 @@ function changePossibilitiesTopDown(amountLeft, denominations, currentIndex = 0)
 	// We overshot the amount left (used too many coins)
 	if (amountLeft < 0) return 0;
 
-	// We're out of denominations
+	// if We're out of denominations
 	if (currentIndex === denominations.length) return 0;
 
 	console.log('checking ways to make ' + amountLeft + ' with [' + denominations.slice(currentIndex).join(', ') + ']');
@@ -67,7 +67,9 @@ class Change {
 
 		if (amountLeft < 0) return 0;
 
-		if (currentIndex === denominations.length) return 1;
+		if (currentIndex === denominations.length) return 0;
+
+		const currentCoin = denominations[currentIndex]
 
 		let numPossibilities = 0;
 		while (amountLeft > 0) {
@@ -79,6 +81,9 @@ class Change {
 		return numPossibilities
 	}
 }
+
+const amountLeft = new Change();
+amountLeft.changePossibilitiesTopDown(4, [1, 2, 3])
 
 //Put simply, a bottom-up algorithm "starts from the beginning," while a 
 //recursive algorithm often "starts from the end and works backwards.

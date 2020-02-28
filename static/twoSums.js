@@ -22,4 +22,4 @@ function twoSums(nums, target) {
     return comp
 };
 
-console.log(twoSums([3, 2, 3], 6))
+console.log(twoSums([1, 2, 3, 4], 6))
