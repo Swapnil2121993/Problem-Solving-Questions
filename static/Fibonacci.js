@@ -92,15 +92,11 @@ We can notice this is a binary tree ↴ whose height is nn, which means the tota
     n
 ).
 
-So our total runtime is O(2 ^ n)O(2 
-    n
-).That's an "exponential time cost," since the nn is in an exponent. Exponential costs are terrible. This is way worse than O(n^2)O(n 
-2
-     ) or even O(n ^ { 100})O(n 
-    100
-).
+// So our total runtime is O(2 ^ n).That's an "exponential time cost," since the n is in an exponent. 
+//Exponential costs are terrible. This is way worse than O(n^2)O(n) or 
+//even O(n ^ { 100})
 
-    // Our recurrence tree above essentially gets twice as big each time we 
-    //add 1 to n. So as n gets really big, our runtime quickly spirals out of 
-    //control. (for recursion)
+// Our recurrence tree above essentially gets twice as big each time we 
+//add 1 to n. So as n gets really big, our runtime quickly spirals out of 
+//control. (for recursion)
 
