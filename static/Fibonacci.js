@@ -88,9 +88,8 @@ console.log(fib(10))
 //Plus we're still building up a call stack that'll occupy nn space. 
 //Can we avoid one or both of these space expenses? (for memoization)
 
-We can notice this is a binary tree ↴ whose height is nn, which means the total number of nodes is O(2 ^ n)O(2 
-    n
-).
+//We can notice this is a binary tree ↴ whose height is nn, which means the total 
+//number of nodes is O(2 ^ n)
 
 // So our total runtime is O(2 ^ n).That's an "exponential time cost," since the n is in an exponent. 
 //Exponential costs are terrible. This is way worse than O(n^2)O(n) or 
