@@ -87,7 +87,7 @@ console.log(isValid('{{()}}'))
 // If we finish iterating and our stack is empty, we know every opener was properly closed.
 
 // Complexity
-// O(n)O(n) time (one iteration through the string), and O(n)O(n) space 
+// O(n) time (one iteration through the string), and O(n)O(n) space 
 //(in the worst case, all of our characters are openers, so we push 
 //them all onto the stack).
 

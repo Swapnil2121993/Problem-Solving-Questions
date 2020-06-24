@@ -47,5 +47,5 @@ function duplicateCount1(text) {
     }).length;
 }
 
-console.log(duplicateCount1('aabbbe'))
+console.log(duplicateCount('aabbbe'))
 

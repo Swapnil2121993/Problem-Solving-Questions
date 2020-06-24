@@ -1,4 +1,4 @@
-// Write a function fib() that takes an integer nn and returns the nnth
+// Write a function fib() that takes an integer n and returns the nth
 //Fibonacci ↴ number.
 
 // Let's say our Fibonacci series is 0-indexed and starts with 0. So:
@@ -50,7 +50,7 @@ class Fibonacci {
 
 function fib(n) {
     if (n < 1) {
-        return 'invalida number'
+        return 'invalid number'
     }
     if (n === 0 || n === 1) {
         return 1

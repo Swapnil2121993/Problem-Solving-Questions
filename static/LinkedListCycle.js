@@ -43,7 +43,7 @@ function containsCycle(firstNode) {
     // Until we hit the end of the list
     while (fastRunner && fastRunner.next) {
         slowRunner = slowRunner.next;
-        fastRunner = fastRunner.next;
+        fastRunner = fastRunner.next.next;
 
         // Case: fastRunner is about to "lap" slowRunner
         if (fastRunner === slowRunner) {

@@ -43,7 +43,7 @@ function changePossibilitiesTopDown(amountLeft, denominations, currentIndex = 0)
 
 	return numPossibilities;
 }
-console.log(changePossibilitiesTopDown(4, [1, 2, 3]))
+// console.log(changePossibilitiesTopDown(4, [1, 2, 3]))
 
 //Memoization is a common strategy for dynamic programming problems, which are 
 //problems where the solution is composed of solutions to the same problem with 

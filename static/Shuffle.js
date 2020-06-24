@@ -89,7 +89,7 @@ function shuffle(array) {
     return array
 }
 
-console.log(nativeShuffle(['a', 'b', 'c']))
+console.log(shuffle(['a', 'b', 'c']))
 
 //Solution
 //We choose a random item to move to the first index, then we choose a random 

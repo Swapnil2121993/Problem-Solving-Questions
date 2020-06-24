@@ -63,4 +63,4 @@ function snail1(array) {
     return vector;
 }
 
-console.log(snail1([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))
+console.log(snail([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))

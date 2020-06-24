@@ -41,5 +41,5 @@ function iqTest1(numbers) {
 	return even.length === 1 ? even[0] : odd[0]
 }
 
-console.log(iqTest("4, 6, 2, 8, 5"))
+console.log(iqTest1("4, 6, 2, 8, 5"))
 

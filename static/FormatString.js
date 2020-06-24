@@ -49,4 +49,4 @@ function list2(names) {
     return xs.length ? xs.join(", ") + " & " + x : x || ""
 }
 
-console.log(list2([{ name: 'Bart' }]))
+console.log(list1([{ name: 'Bart' }, { name: 'swapnil'}, { name: 'neel'}, { name: 'nisarg'}]))

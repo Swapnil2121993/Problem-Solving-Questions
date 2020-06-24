@@ -46,4 +46,4 @@ function validate2(password) {
 //A-Z a single character in the range between A (index 65) and Z (index 90) 
 //(case sensitive)
 
-console.log(validate('Swap1993#'))
+console.log(validate1('Swap1993'))

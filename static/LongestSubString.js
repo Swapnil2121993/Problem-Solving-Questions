@@ -41,11 +41,11 @@ var lengthOfLongestSubstring = function (s) {
     return count
 }
 
-console.log(lengthOfLongestSubstring('abcabcbb'))
+// console.log(lengthOfLongestSubstring('abcabcbb'))
 
 //using sliding window
 
-var lengthOfLongestSubstring = function (s) {
+var lengthOfLongestSubstring1 = function (s) {
     let count = 0;
     let n = s.length;
     let i = 0;
@@ -56,9 +56,11 @@ var lengthOfLongestSubstring = function (s) {
         let char = s.charAt(j);
         if (!set.has(char)) {
             set.add(char);
+            // expand window to right with new element/char
             j++;
             count = Math.max(count, j - i)
         } else {
+            // increment index from left
             set.delete(s.charAt(i));
             i++;
         }
@@ -66,7 +68,7 @@ var lengthOfLongestSubstring = function (s) {
     return count
 }
 
-console.log(lengthOfLongestSubstring('abcabcbb'))
+console.log(lengthOfLongestSubstring1('abcabcbb'))
 
 
 

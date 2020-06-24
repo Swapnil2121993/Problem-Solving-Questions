@@ -145,4 +145,4 @@ function formatDuration1(seconds) {
     }
 }
 
-console.log(formatDuration(3600))
+console.log(formatDuration1(3650))

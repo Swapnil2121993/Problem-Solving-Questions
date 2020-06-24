@@ -38,4 +38,4 @@ var sum_pairs1 = function sum_pairs(ints, s) {
     }
 }
 
-console.log(sum_pairs([1, 2, 3, 4], 6))
+console.log(sum_pairs1([1, 2, 3, 4], 6))

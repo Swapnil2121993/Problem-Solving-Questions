@@ -25,7 +25,7 @@ function longestCommonPrefix(string) {
     return prefix
 }
 
-function longestCommonPrefix(strs) {
+function longestCommonPrefix1(strs) {
     if (strs.length === 0) return '';
     if (strs.length === 1) return strs[0];
     var pointer = 0;
@@ -51,4 +51,4 @@ function longestCommonPrefix(strs) {
     return longestPrefix;
 };
 
-console.log(longestCommonPrefix(["c", "acc", "accd"]))
+console.log(longestCommonPrefix1(["flower", "flow", "flight"]))

@@ -81,6 +81,6 @@ function getCenter(s, c) {
     return [L, --R];
 }
 
-console.log(expandAroundCenterSolution('babad'))
+console.log(longestPalindrome('babad'))
 
 // Complexity O(n^2)
