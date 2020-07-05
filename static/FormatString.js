@@ -23,7 +23,7 @@ function list(names) {
     }
     else {
         const string1 = arrayList.slice(0, arrayList.length - 1).join(', ')
-        const string2 = ' & ' + arrayList.slice(-1).join(' & ')
+        const string2 = ' & ' + arrayList.slice(-1)
         return string1 + string2
     }
 }
@@ -49,4 +49,4 @@ function list2(names) {
     return xs.length ? xs.join(", ") + " & " + x : x || ""
 }
 
-console.log(list1([{ name: 'Bart' }, { name: 'swapnil'}, { name: 'neel'}, { name: 'nisarg'}]))
+console.log(list2([{ name: 'Bart' }, { name: 'swapnil'}, { name: 'neel'}, { name: 'nisarg'}]))
