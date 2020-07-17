@@ -404,9 +404,8 @@ class worldCloudData {
   }
 }
 
-const word = new worldCloudData('I like Cake').wordsToCounts
-const map = word.populateWordsToCounts
-console.log(map)
+const word = new worldCloudData('swapnil trivedi swapnil')
+console.log(word.__proto__)
 
 
 //Complexity
