@@ -80,7 +80,6 @@ function throttle(fn) {
       }
       
       1 + 2 = 3
-      Michael i can't hear you 
           
     </style>
     <script>
@@ -88,7 +87,7 @@ function throttle(fn) {
         start: "",
         dest: ""
       }
-      const tickets = [{start: "sf", dest: "la"}, {start: 'la', dest: 'vegas', { start: 'vegas', dest: 'ny'}];
+      const tickets = [{start: "sf", dest: "la"}, {start: 'la', dest: 'vegas'}, { start: 'vegas', dest: 'ny'}];
       function getIten(tickets) {
         const mergedTicket = [];
         const currentStart = tickect[0].start
