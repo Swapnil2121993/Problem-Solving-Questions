@@ -28,7 +28,7 @@ function changePossibilitiesTopDown(amountLeft, denominations, currentIndex = 0)
 	// if We're out of denominations
 	if (currentIndex === denominations.length) return 0;
 
-	console.log('checking ways to make ' + amountLeft + ' with [' + denominations.slice(currentIndex).join(', ') + ']');
+	// console.log('checking ways to make ' + amountLeft + ' with [' + denominations.slice(currentIndex).join(', ') + ']');
 
 	// Choose a current coin
 	const currentCoin = denominations[currentIndex];
@@ -50,36 +50,47 @@ function changePossibilitiesTopDown(amountLeft, denominations, currentIndex = 0)
 //smaller inputs (as with the Fibonacci problem, above). The other common strategy for dynamic programming 
 //problems is going bottom-up, which is usually cleaner and often more efficient.
 
-class Change {
-	constructor() {
-		this.memo = {}
-	}
+  class Change {
+  constructor() {
+    this.memo = {};
+  }
 
-	changePossibilitiesTopDown(amountLeft, denominations, currentIndex = 0) {
+  changePossibilitiesTopDown(amountLeft, denominations, currentIndex = 0) {
 
-		// Check our memo and short-circuit if we've already solved this one
-		const memoKey = [amountLeft, currentIndex].join(', ');
-		if (this.memo.hasOwnProperty(memoKey)) {
-			return this.memo[memoKey]
-		}
+    // Check our memo and short-circuit if we've already solved this one
+    const memoKey = [amountLeft, currentIndex].join(', ');
+    if (this.memo.hasOwnProperty(memoKey)) {
+      console.log('grabbing memo [' + memoKey + ']');
+      return this.memo[memoKey];
+    }
 
-		if (amountLeft === 0) return 1;
+    // Base cases:
+    // We hit the amount spot on. yes!
+    if (amountLeft === 0) return 1;
 
-		if (amountLeft < 0) return 0;
+    // We overshot the amount left (used too many coins)
+    if (amountLeft < 0) return 0;
 
-		if (currentIndex === denominations.length) return 0;
+    // We're out of denominations
+    if (currentIndex === denominations.length) return 0;
 
-		const currentCoin = denominations[currentIndex]
+    console.log('checking ways to make ' + amountLeft + ' with [' + denominations.slice(currentIndex).join(', ') + ']');
 
-		let numPossibilities = 0;
-		while (amountLeft > 0) {
-			numPossibilities += changePossibilitiesTopDown(amountLeft, denominations, currentIndex + 1);
-			amountLeft -= currentCoin
-		}
-		// Save the answer in our memo so we don't compute it again
-		this.memo[memoKey] = numPossibilities;
-		return numPossibilities
-	}
+    // Choose a current coin
+    const currentCoin = denominations[currentIndex];
+
+    // See how many possibilities we can get
+    // for each number of times to use currentCoin
+    let numPossibilities = 0;
+    while (amountLeft >= 0) {
+      numPossibilities += this.changePossibilitiesTopDown(amountLeft, denominations, currentIndex + 1);
+      amountLeft -= currentCoin;
+    }
+
+    // Save the answer in our memo so we don't compute it again
+    this.memo[memoKey] = numPossibilities;
+    return numPossibilities;
+  }
 }
 
 const amountLeft = new Change();

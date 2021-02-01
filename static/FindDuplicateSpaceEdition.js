@@ -51,25 +51,26 @@
 //We can "brute force" this by taking each number in the range 1..n and, 
 //for each, walking through the array to see if it appears twice.
 
-//function findRepeat(numbers) {
-  //for (let needle = 1; needle < numbers.length; needle++) {
-    //let hasBeenSeen = false;
-    //for (let i = 0; i < numbers.length; i++) {
-      //const number = numbers[i];
-      //if (number === needle) {
-        //if (hasBeenSeen) {
-          //return number;
-        //} else {
-          //hasBeenSeen = true;
-        //}
-      //}
-    //}
-  //}
+function findRepeat1(numbers) {
+  for (let needle = 1; needle < numbers.length; needle++) {
+    let hasBeenSeen = false;
+    for (let i = 0; i < numbers.length; i++) {
+      const number = numbers[i];
+      if (number === needle) {
+        if (hasBeenSeen) {
+          return number;
+        } else {
+          hasBeenSeen = true;
+        }
+      }
+    }
+  }
 
-  // Whoops--no duplicate
-  //throw new Error('no duplicate!');
-//}
+  //Whoops--no duplicate
+  throw new Error('no duplicate!');
+}
 
+console.log(findRepeat1([1,2,3,2,5]))
 //This is O(1) space and O(n^2) time.
 
 //That space complexity can't be beat, but the time cost seems a bit high. Can we 

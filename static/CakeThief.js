@@ -557,4 +557,9 @@ function maxDuffelBagValue(cakeTypes, weightCapacity) {
   return maxValuesAtCapacities[weightCapacity];
 }
 
-console.log(maxDuffelBagValue([{ weight: 4, value: 4 },{ weight: 5, value: 5}], 9))
+console.log(maxDuffelBagValue([{ weight: 2, value: 3 },
+  { weight: 3, value: 6 },
+  { weight: 5, value: 1 },
+  { weight: 6, value: 1 },
+  { weight: 7, value: 1 },
+  { weight: 8, value: 1 }], 7))

@@ -42,4 +42,4 @@ function longestConsec1(strarr, k) {
         )
 }
 
-console.log(longestConsec1(['swapnil', 'neel', 'trivedi'], 3))
+console.log(longestConsec(['swapnil', 'neel', 'trivedi'], 3))

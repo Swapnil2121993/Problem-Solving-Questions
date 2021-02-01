@@ -42,6 +42,9 @@ class Trie {
     }
 }
 
+const word = new Trie()
+word.addWord('cakes')
+word.addWord('cake')
 //Breakdown
 
 //Notice that a boatload of URLs start with "www."
