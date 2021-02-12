@@ -64,7 +64,8 @@
 //It's hard to be sure, but try to come up with a reasonable heuristic that 
 //will probably work most of the time.
 
-//Most file systems store the time a file was last edited as metadata on each file. The more recently edited file will probably be the duplicate!
+//Most file systems store the time a file was last edited as metadata on each file. The more recently edited file 
+//will probably be the duplicate!
 
 //One exception here: lots of processes like to regularly save their state to a 
 //file on disc, so that if your computer suddenly crashes the processes 

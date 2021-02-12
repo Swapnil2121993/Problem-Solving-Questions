@@ -123,7 +123,7 @@
 // [ 'h', 'h', ' ', 'g', ' ', 'c', ' ', 'd', 'd',
 //   ' ', 'e', ' ', 'f', 'f', ' ', 'b', 'b', ' ', 'a' ];
 
-//We have to move all nn characters except the first and last words, and a 
+//We have to move all n characters except the first and last words, and a 
 //couple spaces. So we move n-5 characters in total.
 
 //For the third swap, we have another 5 characters we don't have to move. 
